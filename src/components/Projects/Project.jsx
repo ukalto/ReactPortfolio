@@ -2,7 +2,8 @@ import React from 'react'
 import styled from 'styled-components';
 
 const Project = (props) => {
-    const {img, disc, ref, apptitle, icons} = props.item;
+    const {img, disc, ref, apptitle, icons, ref_name} = props.item;
+    const linkText = ref_name ? ref_name : 'GitHub';
     return (
         <Container className='project'>
             <img src={img} alt="project"/>
@@ -13,7 +14,7 @@ const Project = (props) => {
                     ))}
                 </TitleWrapper>
                 <p><span style={{color: "var(---secondary)"}}>{apptitle}</span> {disc}
-                    <a href={ref}>GitHub</a>
+                    <a href={ref}>{linkText}</a>
                 </p>
             </div>
         </Container>

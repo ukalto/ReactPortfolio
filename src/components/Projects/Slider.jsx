@@ -2,17 +2,19 @@ import React, {useRef} from 'react'
 import Slider from 'react-slick';
 import Project from './Project';
 import {IoIosArrowBack, IoIosArrowForward} from "react-icons/io";
-import FamilyTreeThreeImg from '../../assets/FamilyTree/FamilyTreeThree.png';
-import TicketLineTwoImg from '../../assets/TicketLine/TicketLineTwo.png';
-import ArtmartOneImg from '../../assets/Artmart/ArtmartOne.png';
-import RandomMathTwoImg from '../../assets/RandomMath/RandomMathTwo.png';
+import FamilyTreeImg from '../../assets/FamilyTree/FamilyTreeThree.png';
+import TicketLineImg from '../../assets/TicketLine/TicketLineTwo.png';
+import ArtmartImg from '../../assets/Artmart/ArtmartOne.png';
+import RandomMathImg from '../../assets/RandomMath/RandomMathTwo.png';
+import VerbundVisionMobileImg from '../../assets/VerbundVisionMobile/VerbundVisionMobileFour.png';
 import styled from 'styled-components';
 import {RiAngularjsLine} from "react-icons/ri";
 import {GrDocker} from "react-icons/gr";
 import {DiNodejsSmall} from "react-icons/di";
 import {BsFiletypeSql} from "react-icons/bs";
-import {FaVuejs} from "react-icons/fa";
+import {FaJava, FaVuejs} from "react-icons/fa";
 import {SiPostgresql, SiSpring} from "react-icons/si";
+import {TbApi} from "react-icons/tb";
 
 let settings = {
     className: "center",
@@ -104,7 +106,7 @@ const Buttons = styled.div`
 
 let data = [
     {
-        img: TicketLineTwoImg,
+        img: TicketLineImg,
         disc: "is the ultimate destination for all ticketing needs, providing a user-friendly online platform for purchasing and reserving tickets.",
         ref: "https://github.com/ukalto/Ticket-Line",
         apptitle: "Ticket Line",
@@ -112,19 +114,21 @@ let data = [
             RiAngularjsLine,
             SiSpring,
             SiPostgresql
-        ]
+        ],
+        ref_name: null
     },
     {
-        img: ArtmartOneImg,
+        img: ArtmartImg,
         disc: "is the best place to buy art online. With access to the Metropolitan Museum of Art collection API a vast selection of high-quality art pieces from around the world is offered.",
         ref: "https://github.com/ukalto/Web-Engineering",
         apptitle: "Artmart",
         icons: [
             FaVuejs
-        ]
+        ],
+        ref_name: null
     },
     {
-        img: RandomMathTwoImg,
+        img: RandomMathImg,
         disc: "is a math calculation website that allowes users to track their progress and compete with other math enthusiasts worldwide.",
         ref: "https://github.com/ukalto/RandomMath",
         apptitle: "RandomMath",
@@ -133,10 +137,11 @@ let data = [
             GrDocker,
             DiNodejsSmall,
             BsFiletypeSql
-        ]
+        ],
+        ref_name: null
     },
     {
-        img: FamilyTreeThreeImg,
+        img: FamilyTreeImg,
         disc: "is a tool designed to help organizing horses with their owners, creating a detailed pedigree that traces the lineage and ancestry of each horse in the network.",
         ref: "https://github.com/ukalto/Family-Tree",
         apptitle: "FamilyTree",
@@ -144,7 +149,18 @@ let data = [
             RiAngularjsLine,
             SiSpring,
             SiPostgresql
-        ]
+        ],
+        ref_name: null
     },
-
+    {
+        img: VerbundVisionMobileImg,
+        disc: "is an Android application developed as part of my diploma project, taking inspiration from the official Verbund Vision app in partnership with Verbund AG. For more information, please refer to the following link.",
+        ref: "https://www.verbund.com/de-at/geschaeftskunden/online-services",
+        apptitle: "VerbundVisionMobile",
+        icons: [
+            FaJava,
+            TbApi
+        ],
+        ref_name: "Verbund"
+    },
 ];

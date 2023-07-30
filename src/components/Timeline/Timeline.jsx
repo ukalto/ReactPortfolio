@@ -98,7 +98,7 @@ const ContentWrapper = styled.div`
     background-color: var(---primary);
     border: 3px solid var(---secondary);
   }
-  
+
   .content {
     background-color: var(---tertiary);
     color: var(---primary);
@@ -124,7 +124,7 @@ const ContentWrapper = styled.div`
     color: var(---secondary);
   }
 
-  @media (max-width: 840px) and (min-width: 651px){
+  @media (max-width: 840px) and (min-width: 651px) {
     .timepoint {
       width: 60%;
     }
@@ -137,7 +137,7 @@ const ContentWrapper = styled.div`
       width: 100%;
     }
 
-    .line{
+    .line {
       margin-left: 20px;
     }
   }
@@ -182,7 +182,7 @@ const data = [
     {
         date_from: new Date(2017, 6, 1),
         date_to: new Date(2017, 7, 1),
-        position: 'Sailing instructor',
+        position: 'Sailing Instructor',
         company: 'Segelschule Hofbauer',
         present: false,
     },
@@ -192,5 +192,12 @@ const data = [
         position: 'Full-Stack-Developer',
         company: 'SALE4U',
         present: false,
+    },
+    {
+        date_from: new Date(2023, 6, 1),
+        date_to: null,
+        position: 'Software Engineer Intern',
+        company: 'Erste Digital',
+        present: true,
     }
 ]

@@ -39,6 +39,9 @@ const IconWrapper = styled.span`
   font-size: 2rem;
   margin-right: 0.5rem;
   padding-top: 0.3rem;
+  @media (max-width: 650px) {
+    font-size: 1.4rem;
+  }
 `;
 
 const SkillName = styled.p`
@@ -46,6 +49,10 @@ const SkillName = styled.p`
   font-weight: bold;
   margin: 0;
   display: inline-block;
+
+  @media (max-width: 650px) {
+    font-size: 0.9rem;
+  }
 `;
 
 

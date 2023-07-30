@@ -76,11 +76,12 @@ const Container = styled.div`
 
 const Skills = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 2rem;
 
-  .Skill {
-    min-width: 2rem;
+  @media (max-width: 650px) {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 1.5rem;
   }
 `;
 
@@ -318,6 +319,21 @@ let skills = [
     {
         Icon: null,
         Skill: "SMT 2.0",
+        Underline: false
+    },
+    {
+        Icon: null,
+        Skill: "XQuery",
+        Underline: false
+    },
+    {
+        Icon: null,
+        Skill: "XSLT",
+        Underline: false
+    },
+    {
+        Icon: null,
+        Skill: "DTD",
         Underline: false
     },
 ];

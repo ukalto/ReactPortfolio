@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 
 const Timepoint = ({timepoint, index}) => {
     const {date_from, date_to, position, company, present} = timepoint;
-    const isSecondIndex = index % 2 === 1;
+    const isEvenIndex = index % 2 === 1;
 
     const formatDate = (date) => {
         const options = {year: 'numeric', month: 'long'};
@@ -11,13 +11,13 @@ const Timepoint = ({timepoint, index}) => {
 
     const handleResize = () => {
         if (window.outerWidth <= 650) {
-            return !isSecondIndex
+            return !isEvenIndex
                 ? {marginRight: '0', display: 'flex', flexDirection: 'row-reverse'}
                 : {marginLeft: '0', display: 'flex', flexDirection: 'row'};
         } else if (window.innerWidth <= 840) {
-            return !isSecondIndex ? {marginRight: 'calc(60% - 20px)'} : {marginLeft: 'calc(60% - 20px)'};
+            return !isEvenIndex ? {marginRight: 'calc(60% - 20px)'} : {marginLeft: 'calc(60% - 20px)'};
         } else {
-            return !isSecondIndex ? {marginRight: 'calc(40% - 20px)'} : {marginLeft: 'calc(40% - 20px)'};
+            return !isEvenIndex ? {marginRight: 'calc(40% - 20px)'} : {marginLeft: 'calc(40% - 20px)'};
         }
     };
 
@@ -41,20 +41,20 @@ const Timepoint = ({timepoint, index}) => {
 
     return (
         <div className={`timepoint ${present ? 'present' : ''}`} style={resizeStyle}>
-            {!isSecondIndex ? (
+            {!isEvenIndex ? (
                 <div className="content">
                     <div className="date">
-                        <a>{!present ? `${formatDate(date_from)} - ${formatDate(date_to)}` : formatDate(date_from)}</a>
+                        <a>{!present ? `${formatDate(date_from)} - ${formatDate(date_to)}` : `${formatDate(date_from)} - Present`}</a>
                     </div>
                     {position !== '' ? <div className="position">{position}</div> : null}
                     <div className="company">{company}</div>
                 </div>
             ) : null}
             <span className="dot"/>
-            {isSecondIndex ? (
+            {isEvenIndex ? (
                 <div className="content">
                     <div className="date">
-                        <a>{!present ? `${formatDate(date_from)} - ${formatDate(date_to)}` : formatDate(date_from)}</a>
+                        <a>{!present ? `${formatDate(date_from)} - ${formatDate(date_to)}` : `${formatDate(date_from)} - Present`}</a>
                     </div>
                     {position !== '' ? <div className="position">{position}</div> : null}
                     <div className="company">{company}</div>
